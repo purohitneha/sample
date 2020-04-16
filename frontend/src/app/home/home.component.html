@@ -1,0 +1,26 @@
+<mat-toolbar class="position-absolute" color="primary">
+  <mat-toolbar-row>
+    <button [routerLink]="['/home']" mat-button>Home</button>
+    <span style="width: 90%;"></span>
+    <button [routerLink]="['/login']" mat-button>Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="d-flex align-items-center h-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+        Admin
+        <mat-card>
+         <a [routerLink]="['/grouplist']" class="ml-2" mat-button color="primary" >List Group to View or Edit Users or Rename Group</a>
+        </mat-card>
+      </div>
+      <div class="col-sm-5">
+        User
+        <mat-card>
+         <a [routerLink]="['/register']" class="ml-2" mat-button color="primary">List & Join Group</a>
+         <a [routerLink]="['/register']" class="ml-2" mat-button color="primary">Create Group</a>
+         </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
