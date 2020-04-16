@@ -1,0 +1,23 @@
+<mat-toolbar class="position-absolute" color="primary">
+  <mat-toolbar-row>
+  <button [routerLink]="['/home']" mat-button>Home</button>
+ 
+
+<table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="groupname">
+      <th mat-header-cell *matHeaderCellDef>Group Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.groupname}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="groupdesc">
+      <th mat-header-cell *matHeaderCellDef> Description</th>
+      <td mat-cell *matCellDef="let element"> {{element.groupdesc}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<span style="width: 90%;"></span>
+<button [routerLink]="['/login']" mat-button>Logout</button>
+</mat-toolbar-row>
+</mat-toolbar>
